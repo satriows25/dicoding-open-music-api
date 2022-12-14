@@ -1,6 +1,6 @@
 # Open Music API
 
-> Proyek submission kelas [Belajar Fundamental Aplikasi Back-End](https://www.dicoding.com/academies/271) di [Dicoding Indonesia](https://www.dicoding.com).
+Proyek submission kelas [Belajar Fundamental Aplikasi Back-End](https://www.dicoding.com/academies/271) di [Dicoding Indonesia](https://www.dicoding.com).
 
 ## Mengonfigurasi Environment
 
@@ -31,5 +31,5 @@ $ npm run start-dev
 
 ## [Postman Collection dan Environment untuk Open Music API](https://github.com/satriows25/dicoding-open-music-api/tree/main/postman)
 
-- **Collection**: /postman/Open Music API V2 Test.postman_collection.json
-- **Environment**: /postman/OpenMusic API Test.postman_environment.json
+- **Collection**: `/postman/Open Music API V2 Test.postman_collection.json`
+- **Environment**: `/postman/OpenMusic API Test.postman_environment.json`
