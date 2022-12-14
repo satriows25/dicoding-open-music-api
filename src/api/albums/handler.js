@@ -1,12 +1,12 @@
 class AlbumsHandler {
-  constructor(albumsService, songsService, albumsValidator) {
+  constructor(albumsService, songsService, validator) {
     this._albumsService = albumsService;
     this._songsService = songsService;
-    this._albumsValidator = albumsValidator;
+    this._validator = validator;
   }
 
   async postAlbumHandler(request, h) {
-    this._albumsValidator.validateAlbumPayload(request.payload);
+    this._validator.validateAlbumPayload(request.payload);
 
     const albumId = await this._albumsService.addAlbum(request.payload);
 
@@ -36,7 +36,7 @@ class AlbumsHandler {
   }
 
   async putAlbumByIdHandler(request) {
-    this._albumsValidator.validateAlbumPayload(request.payload);
+    this._validator.validateAlbumPayload(request.payload);
     const { id } = request.params;
 
     await this._albumsService.editAlbumById(id, request.payload);
