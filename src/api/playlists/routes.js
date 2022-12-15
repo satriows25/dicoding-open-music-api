@@ -10,7 +10,7 @@ const routes = (handler) => [
   {
     method: 'GET',
     path: '/playlists',
-    handler: () => handler.getPlaylistsHandler(),
+    handler: (request) => handler.getPlaylistsHandler(request),
     options: {
       auth: 'openmusic_jwt'
     }
@@ -27,6 +27,14 @@ const routes = (handler) => [
     method: 'GET',
     path: '/playlists/{playlistId}/songs',
     handler: (request) => handler.getSongsFromPlaylistIdHandler(request),
+    options: {
+      auth: 'openmusic_jwt'
+    }
+  },
+  {
+    method: 'GET',
+    path: '/playlists/{playlistId}/activities',
+    handler: (request) => handler.getPlaylistActivityHandler(request),
     options: {
       auth: 'openmusic_jwt'
     }
