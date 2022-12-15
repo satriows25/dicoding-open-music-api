@@ -17,6 +17,11 @@ PGHOST=localhost
 PGPASSWORD=
 PGDATABASE=dicoding_open_music_api
 PGPORT=5432
+
+# JWT Token
+ACCESS_TOKEN_KEY=
+REFRESH_TOKEN_KEY=
+ACCESS_TOKEN_AGE=1800
 ```
 
 ## Menjalankan di local
