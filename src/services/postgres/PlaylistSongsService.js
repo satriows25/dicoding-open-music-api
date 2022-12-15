@@ -3,7 +3,7 @@ const { Pool } = require('pg');
 const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
 
-class PlaylistsService {
+class PlaylistSongsService {
   constructor() {
     this._pool = new Pool();
   }
@@ -29,8 +29,8 @@ class PlaylistsService {
     const query = {
       text: `SELECT songs.id, songs.title, songs.performer
       FROM playlists
-      INNER JOIN playlistsongs ON playlistsongs."playlistId" = playlists.id
-      INNER JOIN songs ON songs.id = playlistsongs."songId"
+      INNER JOIN playlistsongs ON playlistsongs.playlist_id = playlists.id
+      INNER JOIN songs ON songs.id = playlistsongs.song_id
       WHERE playlists.id = $1`,
       values: [playlistId]
     };
@@ -46,7 +46,7 @@ class PlaylistsService {
 
   async deleteSongFromPlaylistId(playlistId, songId) {
     const query = {
-      text: 'DELETE FROM playlistsongs WHERE "playlistId" = $1 AND "songId" = $2 RETURNING id',
+      text: 'DELETE FROM playlistsongs WHERE playlist_id = $1 AND song_id = $2 RETURNING id',
       values: [playlistId, songId]
     };
 
@@ -60,4 +60,4 @@ class PlaylistsService {
   }
 }
 
-module.exports = PlaylistsService;
+module.exports = PlaylistSongsService;

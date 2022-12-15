@@ -1,12 +1,7 @@
 class PlaylistsHandler {
-  constructor(
-    playlistsService,
-    playlistsSongsService,
-    songsService,
-    validator
-  ) {
+  constructor(playlistsService, playlistSongsService, songsService, validator) {
     this._playlistsService = playlistsService;
-    this._playlistsSongsService = playlistsSongsService;
+    this._playlistSongsService = playlistSongsService;
     this._songsService = songsService;
     this._validator = validator;
   }
@@ -55,7 +50,7 @@ class PlaylistsHandler {
 
     await this._songsService.getSongById(songId);
 
-    await this._playlistsSongsService.addSongToPlaylistId({
+    await this._playlistSongsService.addSongToPlaylistId({
       playlistId,
       songId
     });
@@ -76,7 +71,7 @@ class PlaylistsHandler {
     await this._playlistsService.verifyPlaylistOwner(playlistId, credentialId);
 
     const playlist = await this._playlistsService.getPlaylistById(playlistId);
-    playlist.songs = await this._playlistsSongsService.getSongsFromPlaylistId(
+    playlist.songs = await this._playlistSongsService.getSongsFromPlaylistId(
       playlistId
     );
 
@@ -111,7 +106,7 @@ class PlaylistsHandler {
 
     await this._playlistsService.verifyPlaylistOwner(playlistId, credentialId);
 
-    await this._playlistsSongsService.deleteSongFromPlaylistId(
+    await this._playlistSongsService.deleteSongFromPlaylistId(
       playlistId,
       songId
     );
