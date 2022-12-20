@@ -39,5 +39,5 @@ $ npm run start-dev
 
 ## [Postman Collection dan Environment untuk Open Music API](https://github.com/satriows25/dicoding-open-music-api/tree/main/postman)
 
-- **Collection**: `/postman/Open Music API V2 Test.postman_collection.json`
+- **Collection**: `/postman/Open Music API V3 Test.postman_collection.json`
 - **Environment**: `/postman/OpenMusic API Test.postman_environment.json`
