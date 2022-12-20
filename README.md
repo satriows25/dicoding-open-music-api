@@ -22,6 +22,9 @@ PGPORT=5432
 ACCESS_TOKEN_KEY=
 REFRESH_TOKEN_KEY=
 ACCESS_TOKEN_AGE=1800
+
+# Message broker
+RABBITMQ_SERVER=amqp://localhost
 ```
 
 ## Menjalankan di local
