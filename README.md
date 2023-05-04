@@ -2,17 +2,17 @@
 
 The Open Music API is the final project for the [Belajar Fundamental Aplikasi Back-End](https://www.dicoding.com/academies/271) class in [Dicoding Indonesia](https://www.dicoding.com/). It is a RESTful API back-end application with several important features, including:
 
-1. PostgreSQL Database: The application uses PostgreSQL as a database to store user notes data.
+1. Database with PostgreSQL: This application uses PostgreSQL as a database to store song, album, and singer data.
 
-2. JWT-based Authentication and Authorization: The application has an authentication and authorization system that uses JSON Web Tokens (JWT) to secure access to notes data.
+2. Authentication and Authorization with JWT: This application has an authentication and authorization system using JSON Web Token (JWT) to secure access to song, album, and singer data.
 
-3. RabbitMQ Message Broker: The application uses RabbitMQ as a message broker to export notes.
+3. Message Broker with RabbitMQ: This application uses RabbitMQ as a message broker to process messages related to songs, albums, and singers.
 
-4. Storage: The application provides a feature to store image files related to notes.
+4. Storage: This application provides a feature to store audio files related to songs.
 
-5. Redis-based Caching: The application uses Redis as a cache to improve performance by storing frequently accessed notes data in cache.
+5. Caching with Redis: This application uses Redis as a cache to improve performance by storing frequently accessed song, album, and singer data in the cache.
 
-With these features, the application can help users manage and store their notes more effectively and securely. Users can easily access and manipulate their notes data through the available API, as well as obtain faster performance through the use of Redis as a cache.
+With these features, the Open Music API application can help users access and play songs online more effectively and securely. Users can easily access and manipulate song, album, and singer data through the available API, as well as getting faster performance through the use of Redis as a cache.
 
 ## Configuring the Environment
 
